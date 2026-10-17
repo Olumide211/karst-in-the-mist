@@ -288,12 +288,12 @@ body.touch .dock .sep:last-of-type { display: none; }
 <canvas id="scene" tabindex="0" aria-label="Interactive 3D diorama of karst towers rising from a river, wrapped in mist"></canvas>
 
 <div class="ui">
-  <div class="brand" aria-label="lijiang°">
+  <div class="brand" aria-label="Breezy">
     <svg viewBox="0 0 30 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true">
       <path d="M1 18 C4 18 5 9 8 6 C10 9 10 13 12 13 C13 8 14 2 16.5 2 C19 2 19.5 10 21 11 C22 9 23 7 24.5 7 C26.5 7 27 15 29 18"/>
       <path d="M3 18.5 H27" stroke-width="1" opacity=".55"/>
     </svg>
-    <span>lijiang°</span>
+    <span>Breezy</span>
   </div>
 
   <nav class="topnav">
@@ -1889,13 +1889,13 @@ $('btnFull').addEventListener('click', () => {
   else document.exitFullscreen?.();
 });
 (function theme() {
-  let saved = null; try { saved = localStorage.getItem('lijiang-theme'); } catch (e) {}
+  let saved = null; try { saved = localStorage.getItem('breezy-theme'); } catch (e) {}
   if (saved) document.documentElement.dataset.theme = saved;
   $('btnTheme').addEventListener('click', () => {
     const cur = document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     const next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
-    try { localStorage.setItem('lijiang-theme', next); } catch (e) {}
+    try { localStorage.setItem('breezy-theme', next); } catch (e) {}
   });
 })();
 const HINTS_ORBIT = IS_TOUCH
